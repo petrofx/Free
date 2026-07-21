@@ -32,7 +32,10 @@ Clickjacking PoC
 Po dwukrotnym kliknięciu tego konkretnego pliku HTML, strona https://example.com/ ładuje się wewnątrz elementu IFRAME.
 Oczywiście, aby uczynić ten atak groźniejszym, ramka iframe wymagałaby odpowiedniego ostylowania itp., a ofiara musiałaby kliknąć złośliwy link prowadzący do tego pliku HTML*, jednak jest to prosty dowód koncepcji (PoC) pokazujący, że taki atak jest możliwy – choć oczywiście w idealnym świecie nie powinien być możliwy ;)
 
+
 *Plik musiałby oczywiście być udostępniony pod publicznym adresem aby mógł byc przesłany rzeczywistej ofierze, jednak ten test wystarczy aby udowodnic istnienie podatności.
+
+Brak stosownych nagłówków powoduje, że atak jest możliwy w ramach innej domeny i/lub adresu niż domena/adres ofiary. W przeciwnym razie nasz ładunek musiałby znajdować się w lokalizacji w ramach atakowane domeny.
 
 Stopień zagrożenia określa się zwykle  jako „niski”, ponieważ wymagane są dalsze testy – na przykład z użyciem rzeczywistego konta w serwisie https://example_victim.com/ – w celu zweryfikowania rzeczywistego wpływu ataku.
 
